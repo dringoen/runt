@@ -198,14 +198,14 @@ class Time
     old_initialize(*args)
   end
 
-  alias :old_to_yaml :to_yaml
-  def to_yaml(options)
-    if self.instance_variables.empty?
-      self.old_to_yaml(options)
-    else
-      Time.old_parse(self.to_s).old_to_yaml(options)
-    end
-  end
+  # alias :old_to_yaml :to_yaml
+  # def to_yaml(options)
+  #   if self.instance_variables.empty?
+  #     self.old_to_yaml(options)
+  #   else
+  #     Time.old_parse(self.to_s).old_to_yaml(options)
+  #   end
+  # end
 
   class << self
     alias_method :old_parse, :parse
