@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'date'
-require 'runt'
+# require 'runt'
 
 
 module Runt
@@ -97,8 +97,9 @@ module Runt
     end
 
     def succ
-	  result = self + 1
-	end
+      result = self + 1
+      result
+    end
 
     def to_date
       (self.date_precision > DAY) ? DateTime.new(self.year,self.month,self.day,self.hour,self.min,self.sec) : Date.new(self.year, self.month, self.day)
