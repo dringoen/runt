@@ -167,12 +167,12 @@ class Date
   attr_accessor :date_precision
 
   def date_precision
-	if @date_precision.nil? then
+    if @date_precision.nil? then
       if self.class == DateTime then
         @date_precision = Runt::DPrecision::SEC
-	  else
+    else
         @date_precision = Runt::DPrecision::DAY
-	  end
+    end
 	end
     @date_precision
   end

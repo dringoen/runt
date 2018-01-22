@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'runt'
 require 'date'
 
 module Runt
@@ -16,7 +15,7 @@ module Runt
   module DPrecision
 
     def DPrecision.to_p(date,prec=DEFAULT)
-	  has_p = date.respond_to?(:date_precision)
+    #has_p = date.respond_to?(:date_precision)
 	  #puts "DPrecision.to_p(#{date.class}<#{has_p ? date.date_precision : nil}>,#{prec})"
 	  return date if PDate == date.class && (prec == date.date_precision)
       case prec
@@ -43,7 +42,7 @@ module Runt
     end
 
     #Simple value class for keeping track of precisioned dates
-    class Precision
+  class Precision
       include Comparable
 
       attr_reader :precision
